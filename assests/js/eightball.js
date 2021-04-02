@@ -1,13 +1,17 @@
-let userName = window.prompt("What is your name?");
-userName ? window.alert(`Hello ${userName}!`):window.alert('Please enter a name!');
+//Asks for the player's name
+var userName = window.prompt("What is your name?");
+window.alert(`Hello ${userName}!`);
 
+//stores name information and alerts the player what they wrote
 let userQuestion = window.prompt('What is your question to the Ball of fortune?');
 
 window.alert(`${userName} is asking, ${userQuestion}`);
 
+//Selects a number between 0-7 (8 not included since it starts from 0)
 let randomNumber = Math.floor(Math.random() * 8);
 let eightBall = '';
 
+//Based on number chooses a value to output
 switch (randomNumber){
   case 0:
     eightBall='It is certain';
@@ -35,4 +39,5 @@ switch (randomNumber){
     break;   
 }
 
+//Displays the answer
 window.alert(eightBall);
